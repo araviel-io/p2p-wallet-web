@@ -1,4 +1,4 @@
-import * as web3 from '@solana/web3.js';
+import * as web3 from '@safecoin/web3.js';
 import { createReducer } from 'typesafe-actions';
 
 import { NETWORKS } from 'config/constants';

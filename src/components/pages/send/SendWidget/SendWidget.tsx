@@ -2,7 +2,7 @@ import React, { FunctionComponent, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
 
-import * as web3 from '@solana/web3.js';
+import * as web3 from '@safecoin/web3.js';
 
 import { SendSwapWidget } from 'components/common/SendSwapWidget';
 import { transferTokens } from 'store/actions/complex';

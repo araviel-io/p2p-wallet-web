@@ -1,4 +1,4 @@
-import * as web3 from '@solana/web3.js';
+import * as web3 from '@safecoin/web3.js';
 
 import { ACCOUNT_LAYOUT } from 'constants/solana/bufferLayouts';
 

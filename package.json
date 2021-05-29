@@ -13,12 +13,13 @@
     "@babel/runtime": "^7.12.1",
     "@emotion/is-prop-valid": "^0.8.8",
     "@loadable/component": "^5.14.1",
+    "@safecoin/web3.js": "0.0.0-development",
     "@solana/web3.js": "^0.87.0",
     "@types/bs58": "^4.0.1",
     "bip32": "^2.0.6",
     "bip39": "^3.0.2",
     "bs58": "^4.0.1",
-    "buffer-layout": "^1.2.0",
+    "buffer-layout": "^1.2.1",
     "classnames": "^2.2.6",
     "constants": "^0.0.2",
     "dayjs": "^1.9.5",
@@ -101,18 +102,6 @@
     "stylelint-prettier": "^1.1.2",
     "typescript": "^4.0.3"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "./src/**/*.{js,jsx,ts,tsx}": [
-      "pretty-quick --staged",
-      "eslint src/ --ext js,.jsx,.ts,.tsx --fix",
-      "stylelint ./src/**/*.tsx"
-    ]
-  },
+
   "assetsPath": "./src/assets"
 }

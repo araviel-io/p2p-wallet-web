@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 
-import * as web3 from '@solana/web3.js';
+import * as web3 from '@safecoin/web3.js';
 import { styled } from 'linaria/react';
 
 import { TransactionRow } from '../TransactionRow';

@@ -1,4 +1,4 @@
-import * as web3 from '@solana/web3.js';
+import * as web3 from '@safecoin/web3.js';
 import * as BufferLayout from 'buffer-layout';
 
 export const SYSTEM_PROGRAM_ID = new web3.PublicKey('11111111111111111111111111111111');

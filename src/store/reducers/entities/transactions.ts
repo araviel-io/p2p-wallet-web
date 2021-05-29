@@ -1,4 +1,4 @@
-import web3 from '@solana/web3.js';
+import web3 from '@safecoin/web3.js';
 import { mergeRight, pathOr, uniq } from 'ramda';
 import { createReducer } from 'typesafe-actions';
 import u from 'updeep';

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import * as web3 from '@solana/web3.js';
+import * as web3 from '@safecoin/web3.js';
 
 import { getTokenAccountInfo } from 'store/actions/solana';
 import { RootState } from 'store/types';

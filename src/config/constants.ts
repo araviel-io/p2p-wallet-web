@@ -1,4 +1,4 @@
-import * as web3 from '@solana/web3.js';
+import * as web3 from '@safecoin/web3.js';
 
 export const NETWORKS = [
   { name: 'mainnet-beta', endpoint: web3.clusterApiUrl('mainnet-beta') },

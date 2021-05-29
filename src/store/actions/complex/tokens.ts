@@ -1,4 +1,4 @@
-import * as web3 from '@solana/web3.js';
+import * as web3 from '@safecoin/web3.js';
 
 import { ACCOUNT_LAYOUT, MINT_LAYOUT, TOKEN_PROGRAM_ID } from 'constants/solana/bufferLayouts';
 import { mintTestTokenAsyncAction, transferTokenAsyncAction } from 'store/commands';

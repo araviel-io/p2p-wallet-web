@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useMemo } from 'react';
 import { useSelector } from 'react-redux';
 
-import * as web3 from '@solana/web3.js';
+import * as web3 from '@safecoin/web3.js';
 // import ReactHighcharts from 'react-highcharts';
 import { styled } from 'linaria/react';
 import { rgba } from 'polished';

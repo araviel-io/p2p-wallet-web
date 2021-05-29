@@ -1,4 +1,4 @@
-import * as web3 from '@solana/web3.js';
+import * as web3 from '@safecoin/web3.js';
 import { createAction, createAsyncAction } from 'typesafe-actions';
 
 import { ParsedAccountData } from 'store/types';
