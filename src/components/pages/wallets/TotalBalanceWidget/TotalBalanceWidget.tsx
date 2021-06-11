@@ -10,10 +10,10 @@ import { Card } from 'components/common/Card';
 import { SYSTEM_PROGRAM_ID, TOKEN_PROGRAM_ID } from 'constants/solana/bufferLayouts';
 import { TOKENS_BY_ENTRYPOINT } from 'constants/tokens';
 import { RootState } from 'store/types';
-import { getBalance, getTokenAccountInfo } from 'store/actions/solana';
+import { getMySafeBalance, getMyBalance, getTokenAccountInfo } from 'store/actions/solana';
 import { useTokenInfo } from 'utils/hooks/useTokenInfo';
+//import  SafeBalance from 'components/common/SafeBalance'
 
-//import { SafeBalance } from 'components/common/SafeBalance';
 // import { calculateInterval, calculateStart } from 'utils/charts';
 //
 // import { serials } from './data';
@@ -77,6 +77,7 @@ export const TotalBalanceWidget: FunctionComponent = () => {
     order,
   ]);
 
+const safebal = getMySafeBalance(); 
 
   // Oh my gosh
   const totalBalance = useMemo(
@@ -99,7 +100,7 @@ export const TotalBalanceWidget: FunctionComponent = () => {
               }
             }
           } else if (tokenPublicKey.equals(SYSTEM_PROGRAM_ID)) {
-            return prev + (cur.lamports / web3.LAMPORTS_PER_SOL) * (rates['SOL/USDT'] || 0);
+            return prev + (cur.lamports / web3.LAMPORTS_PER_SAFE) * (rates['SOL/USDT'] || 0);
           }
 
           return prev;
@@ -127,7 +128,7 @@ export const TotalBalanceWidget: FunctionComponent = () => {
           )}
          
         </Price>
-        <SafeBal>test{balanceLamports}</SafeBal>
+        <SafeBal></SafeBal>
         {/* <ChartWrapper> */}
         {/*  <ReactHighcharts config={config} isPureConfig /> */}
         {/* </ChartWrapper> */}
