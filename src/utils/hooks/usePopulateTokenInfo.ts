@@ -66,7 +66,8 @@ export function usePopulateTokenInfo(
       name: 'SAFE',
       owner: ownerAccount.publicKey.toBase58(),
       symbol: 'SAFE',
-      amount: tokenAccount.lamports / web3.LAMPORTS_PER_SOL,
+      //amount: tokenAccount.lamports / web3.LAMPORTS_PER_SOL,
+      amount: tokenAccount.lamports  / web3.LAMPORTS_PER_SAFE,
       decimals: 9,
     };
   }
