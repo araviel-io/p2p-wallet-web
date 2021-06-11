@@ -10,6 +10,10 @@ import { Card } from 'components/common/Card';
 import { SYSTEM_PROGRAM_ID, TOKEN_PROGRAM_ID } from 'constants/solana/bufferLayouts';
 import { TOKENS_BY_ENTRYPOINT } from 'constants/tokens';
 import { RootState } from 'store/types';
+import { getBalance, getTokenAccountInfo } from 'store/actions/solana';
+import { useTokenInfo } from 'utils/hooks/useTokenInfo';
+
+//import { SafeBalance } from 'components/common/SafeBalance';
 // import { calculateInterval, calculateStart } from 'utils/charts';
 //
 // import { serials } from './data';
@@ -32,6 +36,15 @@ const Price = styled.div`
   align-self: flex-end;
 
   color: #000;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 120%;
+`;
+
+const SafeBal = styled.div`
+  align-self: flex-end;
+
+  color: red;
   font-weight: 500;
   font-size: 34px;
   line-height: 120%;
@@ -63,6 +76,7 @@ export const TotalBalanceWidget: FunctionComponent = () => {
     publicKey,
     order,
   ]);
+
 
   // Oh my gosh
   const totalBalance = useMemo(
@@ -111,7 +125,9 @@ export const TotalBalanceWidget: FunctionComponent = () => {
           {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(
             totalBalance,
           )}
+         
         </Price>
+        <SafeBal>test{balanceLamports}</SafeBal>
         {/* <ChartWrapper> */}
         {/*  <ReactHighcharts config={config} isPureConfig /> */}
         {/* </ChartWrapper> */}

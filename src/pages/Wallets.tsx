@@ -10,7 +10,7 @@ import { CurrenciesWidget } from 'components/pages/wallets/CurrenciesWidget';
 // import { SendAgainWidget } from 'components/pages/wallets/SendAgainWidget';
 import { TotalBalanceWidget } from 'components/pages/wallets/TotalBalanceWidget';
 import { RootState } from 'store/types';
-
+import { getBalance, getTokenAccountInfo } from 'store/actions/solana';
 const WrapperTemp = styled.div`
   display: grid;
   grid-gap: 32px;
@@ -45,7 +45,6 @@ export const Wallets: FunctionComponent = () => {
       [5, 'morning'],
       [0, 'night'],
     ];
-
     const hours = new Date().getHours();
     for (const [hour, message] of data) {
       if (hours >= hour) {
@@ -67,6 +66,7 @@ export const Wallets: FunctionComponent = () => {
           <BalanceGroup>
             <TotalBalanceWidget />
             <ActionsWidget publicKey={publicKey} />
+         
           </BalanceGroup>
           <CurrenciesWidget />
         </WrapperTemp>

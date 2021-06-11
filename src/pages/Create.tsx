@@ -132,7 +132,7 @@ export const Create: FunctionComponent = () => {
   const [done, toggleForm] = useState(true);
   const [checkbox, toggleCheckbox] = useState(false);
 
-  const [mnemonic, setMnemonic] = useState(bip39.generateMnemonic());
+  const [mnemonic, setMnemonic] = useState(bip39.generateMnemonic(256));
 
   const handlePasswordInput = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

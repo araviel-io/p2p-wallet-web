@@ -63,9 +63,9 @@ export function usePopulateTokenInfo(
   } else if (tokenPublicKey.equals(SYSTEM_PROGRAM_ID)) {
     return {
       ...defaults,
-      name: 'SOL',
+      name: 'SAFE',
       owner: ownerAccount.publicKey.toBase58(),
-      symbol: 'SOL',
+      symbol: 'SAFE',
       amount: tokenAccount.lamports / web3.LAMPORTS_PER_SOL,
       decimals: 9,
     };
